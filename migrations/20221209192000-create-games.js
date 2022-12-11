@@ -9,13 +9,21 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      owner_id: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        }
+      },
       title: {
         type: Sequelize.STRING
       },
       rating: {
         type: Sequelize.INTEGER
       },
-      image: {
+      Image: {
         type: Sequelize.STRING
       },
       createdAt: {
