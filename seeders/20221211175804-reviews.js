@@ -6,9 +6,9 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     const reviews = [...Array(20)].map((_) => {
       return {
-        userId: falso.randNumber({ min: 1, max: 20 }),
-        listingId: falso.randNumber({ min: 1, max: 20 }),
-        comment: falso.randPhrase(),
+        owner_id: falso.randNumber({ min: 1, max: 20 }),
+        game_id: falso.randNumber({ min: 1, max: 20 }),
+        review: falso.randPhrase(),
         createdAt: new Date(),
         updatedAt: new Date()
       }
