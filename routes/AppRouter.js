@@ -4,5 +4,5 @@ const GameRouter = require('./GameRouter')
 const ReviewRouter = require('./ReviewRouter')
 Router.use('/', AuthRouter)
 Router.use('/games', GameRouter)
-Router.use('/games/reivews', ReviewRouter)
+Router.use('/reivews', ReviewRouter)
 module.exports = Router
